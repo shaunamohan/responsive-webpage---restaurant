@@ -1,0 +1,102 @@
+body {
+  font-size: 15px;
+  line-height: 1.5em;
+}
+
+h2 {
+  background: whitesmoke;
+  border-radius: 16px;
+  color: #174f00;
+  font-size: 60px;
+  padding: 8px 24px;
+}
+
+.btn {
+  background-color: #174f00;
+  border-color: white;
+  color: white;
+  width: 200%;
+}
+
+.btn-2 {
+  padding-right: 60px;
+  position: fixed;
+}
+
+.btn-main {
+  margin-bottom: 5px;
+  padding-left: 60px;
+}
+
+.dropdown-menu a:active {
+  background-color: white;
+}
+
+.footer {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.inner-main-menu li a {
+  color: black;
+  font-size: 20px;
+
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.inner-main-menu li a:hover {
+  color: green;
+}
+
+.inner-main-menu ul {
+  list-style: none;
+}
+
+.inner-main-menu {
+  justify-content: center;
+}
+
+.logo img {
+  height: 200px;
+  left: 50%;
+  margin-left: -140px;
+  padding-left: 20px;
+  position: relative;
+  top: -10px;
+  width: 300px;
+}
+
+.main-feature {
+  align-items: center;
+  background-image: url(https://res.cloudinary.com/dkp2goy1i/image/upload/v1644269430/main-feature_w3w2jo.jpg);
+  background-size: cover;
+  display: flex;
+  font-weight: bold;
+  height: 100vh;
+  justify-content: center;
+  width: 100%;
+}
+
+.navbar {
+  background-color: white;
+  top: -30px;
+}
+
+.navbar-nav a:visited {
+  color: black;
+}
+
+.second-feature {
+  background-attachment: fixed;
+  background-image: url(https://res.cloudinary.com/dkp2goy1i/image/upload/v1644269907/test_gcvgqu.jpg);
+  background-size: cover;
+
+  height: 400px;
+}
+
+#map {
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+}

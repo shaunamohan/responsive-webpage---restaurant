@@ -1,0 +1,199 @@
+<!DOCTYPE HTML>
+<HTML lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Web Page for Restaraunt</title>
+  </head>
+  <body>
+
+    <!--nav bar -->
+
+    <!-- left nav menu -->
+    <nav class="navbar navbar-expand-lg main-menu fixed-top">
+      <div class="collapse navbar-collapse inner-main-menu" id="navbarSupportedContent-1">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="#" target="_blank">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-1" role="button" data-bs-toggle="dropdown">
+              About
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Locations</a></li>
+              <li><a class="dropdown-item" href="#">Origins</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Press</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-2" role="button" data-bs-toggle="dropdown">
+              Menus
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Dinner</a></li>
+              <li><a class="dropdown-item" href="#">Lunch</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Specials</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <!--logo -->
+      <div class="logo lg-block d-block">
+        <a href=""> <img src="logo-1.svg" alt="logo">
+        </a>
+      </div>
+      <!-- drop down button control -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent-1">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- drop down button control -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent-2">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- right nav menu -->
+      <div class="collapse navbar-collapse inner-main-menu" id="navbarSupportedContent-2">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active d-lg-none d-xl-block" href="#" target="_blank">Order</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#" target="_blank">Giftcards</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#" target="_blank">Cookbook</a>
+          </li>
+        </ul>
+
+        <!--modal button 1-->
+        <div class="btn-main">
+          <button type="button" class="btn d-block" data-bs-toggle="modal" data-bs-target="#details">
+            Reserve
+          </button>
+        </div>
+      </div>
+    </nav>
+    <div class="main-feature" id="parallax">
+      <h2 class="d-none d-lg-block">Dish Restaurant</h2>
+       <!--modal button 2-->
+      <div class="btn-2 d-lg-none d-block w-40 py-5">
+        <button type="button" class="btn btn-lg" data-bs-toggle="modal" data-bs-target="#details">
+          Reserve
+        </button>
+      </div>
+    </div>
+<!--second feature -->
+    <div class="second-feature"></div>
+    <!-- contact section -->
+    <section class="p-5 contact">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md">
+            <h4 class="text-center mb-4">Contact</h4>
+            <ul class="list-group list-group-flush lead">
+              <li class="list-group-item">
+                <span class="fw-bold">Location:</span> 123 Toronto Street, Ontario, CA.
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">Phone Number:</span> 123 - 123 -1234
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">Email</span> email@domain.com
+              </li>
+            </ul>
+          </div>
+          <div class="col-md">
+            <div id="map"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="p-5 footer">
+      <div class="container">
+        <p class="">Copyright &copy; Dish</p>
+      </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="details" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Make a Reservation</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <form class="form">
+              <div class="mb-3">
+                <label for="name" class="col-form-label">
+                  Name:
+                </label>
+                <input type="text" class="form-control" id="name" />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="col-form-label">
+                  Email:
+                </label>
+                <input type="text" class="form-control" id="email" />
+              </div>
+              <div class="mb-3">
+                <label for="phone" class="col-form-label">
+                  Phone:
+                </label>
+                <input type="text" class="form-control" id="phone" />
+              </div>
+              <div class="mb-3">
+                <label for="datepicker" class="col-form-label">
+                  Date:
+                </label>
+                <div class="input-group date">
+                  <input type="date" class="form-control" id="datepicker">
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="time" class="col-form-label">
+                  Time:
+                </label>
+                <div class="input-group time"></div>
+                <input type="time" class="form-control" id="time">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="app.js"></script>
+
+    <!-- map js -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+    <script>
+      mapboxgl.accessToken = 'pk.eyJ1Ijoic21vaGFuNiIsImEiOiJja3dneGN0eW0wc3k3MzNub3dkZ2o0cWd4In0.WH4C7fWntVVdoLgbsvebcQ';
+      var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [-79.39246087984318, 43.65383160167397], // toronto
+        zoom: 10,
+      })
+    </script>
+  </body>
+</html>
